@@ -4,7 +4,7 @@ package com.why.threadlocal;
 import java.util.Random;
 
 /**
- * 模拟多线程获取价钱问题，这种方式会出现价格紊乱问题
+ * 模拟多线程获取价钱问题，使用锁机制进行资源访问控制
  * @author why
  * @date 2017/3/31 13:40
  */

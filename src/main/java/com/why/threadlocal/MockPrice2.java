@@ -13,17 +13,17 @@ public class MockPrice2 {
     public static void main(String[] args) {
 
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
 
             new Thread(new Runnable() {
                 @Override
                 public void run() {
+                    int price = new Random().nextInt(10000);
 
                     //每个线程的业务操作
                     /**
                      * 商品价格，在这个位置不属于共享资源，不存在竞争，所以不会有不同线程价格错乱问题
                      */
-                    int price = new Random().nextInt(10000);
                     System.out.println(Thread.currentThread().getName() + " 当前价格为：" + price);
                     /**
                      * A模块进行处理
