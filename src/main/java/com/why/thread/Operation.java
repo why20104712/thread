@@ -1,7 +1,7 @@
 package com.why.thread;
 
 /**
- * 资源操作封装
+ * 资源操作封装,通过锁机制进行资源访问控制
  *
  * @author why
  * @date 2017/3/20 21:36
