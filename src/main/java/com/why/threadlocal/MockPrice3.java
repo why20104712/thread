@@ -8,7 +8,7 @@ import java.util.Random;
  * @author why
  * @date 2017/3/31 13:40
  */
-public class MockPrice1 {
+public class MockPrice3 {
 
     /**
      * 商品价格，多个线程共有资源，存在资源竞争
@@ -24,17 +24,24 @@ public class MockPrice1 {
                 @Override
                 public void run() {
 
-                    //每个线程的业务操作
-                    price = new Random().nextInt(10000);
-                    System.out.println(Thread.currentThread().getName() + " 当前价格为：" + price);
                     /**
-                     * A模块进行处理
+                     * 通过加锁的防止进行共享资源的访问控制，在不同的对象上加锁，依然会存在资源竞争
+                     * 锁在同一个对象上，才会起到保护作用
                      */
-                    new A().getPrice();
-                    /**
-                     * B模块进行处理
-                     */
-                    new B().getPrice();
+                    synchronized (MockPrice3.class) {
+                        //每个线程的业务操作
+                        price = new Random().nextInt(10000);
+                        System.out.println(Thread.currentThread().getName() + " 当前价格为：" + price);
+                        /**
+                         * A模块进行处理
+                         */
+                        new A().getPrice();
+                        /**
+                         * B模块进行处理
+                         */
+                        new B().getPrice();
+                    }
+
                 }
             }).start();
 

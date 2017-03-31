@@ -33,8 +33,6 @@ public class MockPrice2 {
                      * B模块进行处理
                      */
                     new B().getPrice(price);
-
-
                 }
             }).start();
 
