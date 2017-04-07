@@ -2,6 +2,7 @@ package com.why.priority;
 
 /**
  * 测试线程优先级的特性
+ * 继承，规则性，随机性
  * @author why
  * @date 2017/4/7 15:55
  */
