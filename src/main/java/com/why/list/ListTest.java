@@ -11,7 +11,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class ListTest {
 
-    public static void main(String[] args) {
+    public synchronized static void main(String[] args) {
 
 
         /**
