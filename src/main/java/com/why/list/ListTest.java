@@ -29,6 +29,9 @@ public class ListTest {
         }
 
         try {
+            /**
+             * 主线程等待所有子线程执行完成后再操作
+             */
             countDownLatch.await();
         } catch (InterruptedException e) {
             e.printStackTrace();
