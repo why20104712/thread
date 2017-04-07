@@ -7,11 +7,30 @@ package com.why.priority;
  */
 public class ThreadPriority {
 
+
+        /**
+         * The minimum priority that a thread can have.
+         */
+        public final static int MIN_PRIORITY = 1;
+
+        /**
+         * The default priority that is assigned to a thread.
+         */
+        public final static int NORM_PRIORITY = 5;
+
+        /**
+         * The maximum priority that a thread can have.
+         */
+        public final static int MAX_PRIORITY = 10;
+
+
     public static void main(String[] args) {
+
 
         System.out.println("主线程的优先级：" + Thread.currentThread().getName() + ":" + Thread.currentThread().getPriority());
 
         ThreadA threadA = new ThreadA();
+        threadA.setPriority(Thread.MAX_PRIORITY);
         threadA.start();
 
 
