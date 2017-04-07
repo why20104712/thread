@@ -9,21 +9,21 @@ public class Test {
     public static void main(String[] args) {
 
 
-        final Operation operation = new Operation();
+        final ResourceOperation resourceOperation = new ResourceOperation();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
 
                 for (int i = 0; i < 50; i++) {
-                    operation.childThreadOperation(i + 1);
+                    resourceOperation.childThreadOperation(i + 1);
                 }
 
             }
         }).start();
 
         for (int i = 0; i < 50; i++) {
-            operation.mainThreadOperation(i + 1);
+            resourceOperation.mainThreadOperation(i + 1);
         }
 
 

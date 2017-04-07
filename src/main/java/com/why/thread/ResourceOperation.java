@@ -6,7 +6,7 @@ package com.why.thread;
  * @author why
  * @date 2017/3/20 21:36
  */
-public class Operation {
+public class ResourceOperation {
 
     private Boolean lock = true;
 
