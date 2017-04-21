@@ -26,10 +26,5 @@ public class Test {
             resourceOperation.mainThreadOperation(i + 1);
         }
 
-
-
-
-
-
     }
 }
