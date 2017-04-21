@@ -19,13 +19,19 @@ public class Run {
 //        hasSelfPrivateNumThreadB.start();
 
 
-        InstanceVariable instanceVariable = new InstanceVariable();
-        InstanceVariableThreadA instanceVariableThreadA = new InstanceVariableThreadA(instanceVariable);
-        instanceVariableThreadA.start();
+//        InstanceVariable instanceVariable = new InstanceVariable();
+//        InstanceVariableThreadA instanceVariableThreadA = new InstanceVariableThreadA(instanceVariable);
+//        instanceVariableThreadA.start();
+//
+//
+//        InstanceVariableThreadB instanceVariableThreadB = new InstanceVariableThreadB(instanceVariable);
+//        instanceVariableThreadB.start();
 
+        InstanceVariableSync instanceVariableSync = new InstanceVariableSync();
+        InstanceVariableSyncThreadA instanceVariableSyncThreadA = new InstanceVariableSyncThreadA(instanceVariableSync);
+        instanceVariableSyncThreadA.start();
 
-        InstanceVariableThreadB instanceVariableThreadB = new InstanceVariableThreadB(instanceVariable);
-        instanceVariableThreadB.start();
-
+        InstanceVariableSyncThreadB instanceVariableSyncThreadB = new InstanceVariableSyncThreadB(instanceVariableSync);
+        instanceVariableSyncThreadB.start();
     }
 }
