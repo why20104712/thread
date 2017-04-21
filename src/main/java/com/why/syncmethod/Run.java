@@ -10,13 +10,22 @@ public class Run {
 
     public static void main(String[] args) {
 
-        HasSelfPrivateNum hasSelfPrivateNum = new HasSelfPrivateNum();
+//        HasSelfPrivateNum hasSelfPrivateNum = new HasSelfPrivateNum();
+//
+//        HasSelfPrivateNumThreadA hasSelfPrivateNumThreadA = new HasSelfPrivateNumThreadA(hasSelfPrivateNum);
+//        hasSelfPrivateNumThreadA.start();
+//
+//        HasSelfPrivateNumThreadB hasSelfPrivateNumThreadB = new HasSelfPrivateNumThreadB(hasSelfPrivateNum);
+//        hasSelfPrivateNumThreadB.start();
 
-        HasSelfPrivateNumThreadA hasSelfPrivateNumThreadA = new HasSelfPrivateNumThreadA(hasSelfPrivateNum);
-        hasSelfPrivateNumThreadA.start();
 
-        HasSelfPrivateNumThreadB hasSelfPrivateNumThreadB = new HasSelfPrivateNumThreadB(hasSelfPrivateNum);
-        hasSelfPrivateNumThreadB.start();
+        InstanceVariable instanceVariable = new InstanceVariable();
+        InstanceVariableThreadA instanceVariableThreadA = new InstanceVariableThreadA(instanceVariable);
+        instanceVariableThreadA.start();
+
+
+        InstanceVariableThreadB instanceVariableThreadB = new InstanceVariableThreadB(instanceVariable);
+        instanceVariableThreadB.start();
 
     }
 }
