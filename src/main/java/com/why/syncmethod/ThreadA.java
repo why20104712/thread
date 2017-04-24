@@ -13,6 +13,12 @@ public class ThreadA extends Thread{
 
     private PublicVar publicVar;
 
+    private ThrowExceptionNoLock throwExceptionNoLock;
+
+    public ThreadA(ThrowExceptionNoLock throwExceptionNoLock) {
+        this.throwExceptionNoLock = throwExceptionNoLock;
+    }
+
     public ThreadA(){}
 
     public ThreadA(PublicVar publicVar) {
@@ -38,9 +44,10 @@ public class ThreadA extends Thread{
 //        Service service = new Service();
 //        service.service1();
 
-        Sub sub = new Sub();
-        sub.operationSubMethod();
+//        Sub sub = new Sub();
+//        sub.operationSubMethod();
 
+        throwExceptionNoLock.throwExceptionNoLock();
     }
 
 }

@@ -75,13 +75,31 @@ public class Run {
         /**
          * 可重入锁测试
          */
-        service();
+//        service();
 
+        /**
+         * 出现异常锁释放
+         */
+        throwExceptionNoLock();
     }
 
     public static void service() {
         ThreadA threadA = new ThreadA();
         threadA.start();
+    }
+
+
+    public static void throwExceptionNoLock() {
+
+        ThrowExceptionNoLock throwExceptionNoLock = new ThrowExceptionNoLock();
+
+        ThreadA threadA = new ThreadA(throwExceptionNoLock);
+        threadA.setName("a");
+        threadA.start();
+
+        ThreadB threadB = new ThreadB(throwExceptionNoLock);
+        threadB.setName("b");
+        threadB.start();
     }
 
 }

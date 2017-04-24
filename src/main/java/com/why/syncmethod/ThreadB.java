@@ -11,6 +11,15 @@ public class ThreadB extends Thread{
 
     private MyObject myObject;
 
+    public ThreadB() {
+    }
+
+    private ThrowExceptionNoLock throwExceptionNoLock;
+
+    public ThreadB(ThrowExceptionNoLock throwExceptionNoLock) {
+        this.throwExceptionNoLock = throwExceptionNoLock;
+    }
+
     public ThreadB(MyObject myObject) {
         this.myObject = myObject;
     }
@@ -24,7 +33,8 @@ public class ThreadB extends Thread{
         super.run();
 //        twoObjectTwoLock.addNum("b");
 //        myObject.methodA();
-        myObject.methodB();
+//        myObject.methodB();
+        throwExceptionNoLock.throwExceptionNoLock();
     }
 
 }
