@@ -11,6 +11,12 @@ public class ThreadA extends Thread{
 
     private MyObject myObject;
 
+    private PublicVar publicVar;
+
+    public ThreadA(PublicVar publicVar) {
+        this.publicVar = publicVar;
+    }
+
     public ThreadA(MyObject myObject) {
         this.myObject = myObject;
     }
@@ -24,7 +30,8 @@ public class ThreadA extends Thread{
         super.run();
 //        twoObjectTwoLock.addNum("a");
 
-        myObject.methodA();
+//        myObject.methodA();
+        publicVar.setValue("B", "BB");
     }
 
 }

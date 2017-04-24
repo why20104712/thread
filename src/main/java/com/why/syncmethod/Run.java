@@ -46,14 +46,28 @@ public class Run {
          * synchronized方法与锁对象
          * A线程先获取myObject对象的lock锁，B线程访问myObject对象同步的方法，需要等待，B线程访问myObject对象非同步的方法，不用等待
          */
-        MyObject myObject = new MyObject();
-        ThreadA threadA = new ThreadA(myObject);
-        threadA.setName("A");
-        ThreadB threadB = new ThreadB(myObject);
-        threadB.setName("B");
-        threadA.start();
-        threadB.start();
+//        MyObject myObject = new MyObject();
+//        ThreadA threadA = new ThreadA(myObject);
+//        threadA.setName("A");
+//        ThreadB threadB = new ThreadB(myObject);
+//        threadB.setName("B");
+//        threadA.start();
+//        threadB.start();
 
+
+        PublicVar publicVar = new PublicVar();
+        ThreadA threadA = new ThreadA(publicVar);
+        threadA.start();
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        /**
+         * 在取值之前，已经被别的线程修改过，造成脏读
+         */
+        publicVar.getValue();
 
     }
 }
