@@ -27,11 +27,32 @@ public class Run {
 //        InstanceVariableThreadB instanceVariableThreadB = new InstanceVariableThreadB(instanceVariable);
 //        instanceVariableThreadB.start();
 
-        InstanceVariableSync instanceVariableSync = new InstanceVariableSync();
-        InstanceVariableSyncThreadA instanceVariableSyncThreadA = new InstanceVariableSyncThreadA(instanceVariableSync);
-        instanceVariableSyncThreadA.start();
+//        InstanceVariableSync instanceVariableSync = new InstanceVariableSync();
+//        InstanceVariableSyncThreadA instanceVariableSyncThreadA = new InstanceVariableSyncThreadA(instanceVariableSync);
+//        instanceVariableSyncThreadA.start();
+//
+//        InstanceVariableSyncThreadB instanceVariableSyncThreadB = new InstanceVariableSyncThreadB(instanceVariableSync);
+//        instanceVariableSyncThreadB.start();
 
-        InstanceVariableSyncThreadB instanceVariableSyncThreadB = new InstanceVariableSyncThreadB(instanceVariableSync);
-        instanceVariableSyncThreadB.start();
+
+        /**
+         * 先打印b=200,说明是异步的，同步的话，应该先打印a=100
+         * 多个对象多个锁
+         */
+//        new ThreadA(new TwoObjectTwoLock()).start();
+//        new ThreadB(new TwoObjectTwoLock()).start();
+
+        /**
+         * synchronized方法与锁对象
+         */
+        MyObject myObject = new MyObject();
+        ThreadA threadA = new ThreadA(myObject);
+        threadA.setName("A");
+        ThreadB threadB = new ThreadB(myObject);
+        threadB.setName("B");
+        threadA.start();
+        threadB.start();
+
+
     }
 }
