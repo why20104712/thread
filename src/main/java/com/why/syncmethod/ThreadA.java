@@ -13,6 +13,8 @@ public class ThreadA extends Thread{
 
     private PublicVar publicVar;
 
+    public ThreadA(){}
+
     public ThreadA(PublicVar publicVar) {
         this.publicVar = publicVar;
     }
@@ -31,7 +33,14 @@ public class ThreadA extends Thread{
 //        twoObjectTwoLock.addNum("a");
 
 //        myObject.methodA();
-        publicVar.setValue("B", "BB");
+//        publicVar.setValue("B", "BB");
+
+//        Service service = new Service();
+//        service.service1();
+
+        Sub sub = new Sub();
+        sub.operationSubMethod();
+
     }
 
 }

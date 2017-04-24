@@ -55,21 +55,33 @@ public class Run {
 //        threadB.start();
 
 
-        PublicVar publicVar = new PublicVar();
-        ThreadA threadA = new ThreadA(publicVar);
-        threadA.start();
-        try {
-            Thread.sleep(200);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        PublicVar publicVar = new PublicVar();
+//        ThreadA threadA = new ThreadA(publicVar);
+//        threadA.start();
+//        try {
+//            Thread.sleep(200);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         /**
          * 在取值之前，已经被别的线程修改过，造成脏读
          * 脏读一定出现在操作实例变量的情况下，这是不同线程争抢实例变量的结果
          * 解决办法：在获取值的方法上加synchronized关键字
          */
-        publicVar.getValue();
+//        publicVar.getValue();
+
+
+        /**
+         * 可重入锁测试
+         */
+        service();
 
     }
+
+    public static void service() {
+        ThreadA threadA = new ThreadA();
+        threadA.start();
+    }
+
 }
