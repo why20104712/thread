@@ -67,6 +67,7 @@ public class Run {
         /**
          * 在取值之前，已经被别的线程修改过，造成脏读
          * 脏读一定出现在操作实例变量的情况下，这是不同线程争抢实例变量的结果
+         * 解决办法：在获取值的方法上加synchronized关键字
          */
         publicVar.getValue();
 
