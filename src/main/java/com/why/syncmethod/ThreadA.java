@@ -15,6 +15,12 @@ public class ThreadA extends Thread{
 
     private ThrowExceptionNoLock throwExceptionNoLock;
 
+    private Sub sub;
+
+    public ThreadA(Sub sub) {
+        this.sub = sub;
+    }
+
     public ThreadA(ThrowExceptionNoLock throwExceptionNoLock) {
         this.throwExceptionNoLock = throwExceptionNoLock;
     }
@@ -47,7 +53,9 @@ public class ThreadA extends Thread{
 //        Sub sub = new Sub();
 //        sub.operationSubMethod();
 
-        throwExceptionNoLock.throwExceptionNoLock();
+//        throwExceptionNoLock.throwExceptionNoLock();
+
+        sub.subMethod();
     }
 
 }

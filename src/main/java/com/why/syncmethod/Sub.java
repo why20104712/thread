@@ -20,4 +20,23 @@ public class Sub extends MainParent {
 
     }
 
+
+    /**
+     * 演示
+     */
+//    public synchronized void subMethod() {
+    public void subMethod() {
+
+        try {
+            System.out.println("int sub next step sleep begin threadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+            Thread.sleep(1000);
+            System.out.println("int sub next step sleep end threadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+            super.mainMethod();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

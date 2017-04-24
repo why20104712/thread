@@ -11,6 +11,12 @@ public class ThreadB extends Thread{
 
     private MyObject myObject;
 
+    private Sub sub;
+
+    public ThreadB(Sub sub) {
+        this.sub = sub;
+    }
+
     public ThreadB() {
     }
 
@@ -34,7 +40,8 @@ public class ThreadB extends Thread{
 //        twoObjectTwoLock.addNum("b");
 //        myObject.methodA();
 //        myObject.methodB();
-        throwExceptionNoLock.throwExceptionNoLock();
+//        throwExceptionNoLock.throwExceptionNoLock();
+        sub.subMethod();
     }
 
 }

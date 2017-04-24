@@ -80,7 +80,12 @@ public class Run {
         /**
          * 出现异常锁释放
          */
-        throwExceptionNoLock();
+//        throwExceptionNoLock();
+
+        /**
+         * 同步不继承
+         */
+        syncNoExtends();
     }
 
     public static void service() {
@@ -99,6 +104,21 @@ public class Run {
 
         ThreadB threadB = new ThreadB(throwExceptionNoLock);
         threadB.setName("b");
+        threadB.start();
+    }
+
+    /**
+     * 同步不继承
+     */
+    public static void syncNoExtends() {
+
+        Sub sub = new Sub();
+        ThreadA threadA = new ThreadA(sub);
+        threadA.setName("A");
+        threadA.start();
+
+        ThreadB threadB = new ThreadB(sub);
+        threadB.setName("B");
         threadB.start();
     }
 

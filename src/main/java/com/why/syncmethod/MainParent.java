@@ -23,4 +23,16 @@ public class MainParent {
 
     }
 
+    public synchronized void mainMethod() {
+
+        try {
+            System.out.println("int main next step sleep begin threadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+            Thread.sleep(1000);
+            System.out.println("int main next step sleep end threadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 }
