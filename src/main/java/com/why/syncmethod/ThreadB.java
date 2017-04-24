@@ -23,7 +23,8 @@ public class ThreadB extends Thread{
     public void run() {
         super.run();
 //        twoObjectTwoLock.addNum("b");
-        myObject.methodA();
+//        myObject.methodA();
+        myObject.methodB();
     }
 
 }

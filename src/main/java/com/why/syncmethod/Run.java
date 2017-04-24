@@ -44,6 +44,7 @@ public class Run {
 
         /**
          * synchronized方法与锁对象
+         * A线程先获取myObject对象的lock锁，B线程访问myObject对象同步的方法，需要等待，B线程访问myObject对象非同步的方法，不用等待
          */
         MyObject myObject = new MyObject();
         ThreadA threadA = new ThreadA(myObject);
