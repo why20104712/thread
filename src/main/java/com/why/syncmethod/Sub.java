@@ -22,7 +22,7 @@ public class Sub extends MainParent {
 
 
     /**
-     * 演示
+     * 演示同步不继承
      */
 //    public synchronized void subMethod() {
     public void subMethod() {
