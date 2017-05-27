@@ -6,7 +6,10 @@
     <groupId>com.why</groupId>
     <artifactId>thread</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>twoThreadTransData</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>thread</name>
     <description>thread project for Spring Boot</description>
