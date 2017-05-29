@@ -11,7 +11,6 @@ public class MyList {
         list.add("why");
     }
 
-
     public int size() {
         return list.size();
     }

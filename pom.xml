@@ -8,6 +8,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <modules>
         <module>twoThreadTransData</module>
+        <module>base</module>
     </modules>
     <packaging>pom</packaging>
 
