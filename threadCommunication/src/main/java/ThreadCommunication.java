@@ -1,5 +1,3 @@
-package com.why;
-
 /**
  * 线程通信
  * 1、使用死循环和sleep()方法监测某一个条件while(true)

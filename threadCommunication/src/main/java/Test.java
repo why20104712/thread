@@ -1,5 +1,3 @@
-package com.why;
-
 /**
  * 测试
  */

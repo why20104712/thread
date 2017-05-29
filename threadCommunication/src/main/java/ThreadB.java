@@ -1,5 +1,3 @@
-package com.why;
-
 public class ThreadB extends Thread{
 
     private MyList myList;

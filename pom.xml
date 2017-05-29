@@ -9,6 +9,7 @@
     <modules>
         <module>twoThreadTransData</module>
         <module>base</module>
+        <module>threadCommunication</module>
     </modules>
     <packaging>pom</packaging>
 
