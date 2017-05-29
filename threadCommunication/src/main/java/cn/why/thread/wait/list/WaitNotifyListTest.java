@@ -1,4 +1,4 @@
-package cn.why.thread.wait;
+package cn.why.thread.wait.list;
 
 /**
  * 等待通知测试
@@ -6,7 +6,7 @@ package cn.why.thread.wait;
  * @author why
  * @date 2017/5/29 21:40
  */
-public class WaitNotifyTest {
+public class WaitNotifyListTest {
 
 
     public static void main(String[] args) {
@@ -14,11 +14,11 @@ public class WaitNotifyTest {
 
         try {
             Object object = new Object();
-            WaitThread waitThread = new WaitThread(object);
-            waitThread.start();
+            WaitListThread waitListThread = new WaitListThread(object);
+            waitListThread.start();
             Thread.sleep(2000);
-            NotifyThread notifyThread = new NotifyThread(object);
-            notifyThread.start();
+            NotifyListThread notifyListThread = new NotifyListThread(object);
+            notifyListThread.start();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
