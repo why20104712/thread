@@ -1,7 +1,7 @@
-package cn.why.thread.extthread;
+package cn.why.thread.condition.extthread;
 
 
-import cn.why.thread.mylist.MyList;
+import cn.why.thread.condition.mylist.MyList;
 
 public class ThreadB extends Thread {
 

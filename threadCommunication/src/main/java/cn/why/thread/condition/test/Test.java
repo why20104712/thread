@@ -1,9 +1,9 @@
-package cn.why.thread.test;
+package cn.why.thread.condition.test;
 
 
-import cn.why.thread.extthread.ThreadA;
-import cn.why.thread.extthread.ThreadB;
-import cn.why.thread.mylist.MyList;
+import cn.why.thread.condition.mylist.MyList;
+import cn.why.thread.condition.extthread.ThreadA;
+import cn.why.thread.condition.extthread.ThreadB;
 
 public class Test {
 

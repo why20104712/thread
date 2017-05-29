@@ -1,4 +1,4 @@
-package cn.why.thread.mylist;
+package cn.why.thread.condition.mylist;
 
 import java.util.ArrayList;
 import java.util.List;
