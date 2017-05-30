@@ -28,7 +28,11 @@ public class P {
                 String value = System.currentTimeMillis() + "_"
                         + System.nanoTime();
                 ValueObject.value = value;
-                lock.notify();
+//                lock.notify();
+                /**
+                 * 避免假死
+                 */
+                lock.notifyAll();
 
             }
         } catch (InterruptedException e) {
