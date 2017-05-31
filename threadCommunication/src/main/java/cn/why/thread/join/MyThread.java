@@ -29,7 +29,10 @@ public class MyThread implements Runnable{
         int secondValue = (int) (Math.random() * 1000);
         System.out.println("secondValue = " + secondValue);
         try {
-            Thread.sleep(secondValue);
+            System.out.println("子线程开始睡眠：" + System.currentTimeMillis());
+//            Thread.sleep(secondValue);
+            Thread.sleep(3000);
+            System.out.println("子线程结束睡眠：" + System.currentTimeMillis());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
