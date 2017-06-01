@@ -10,6 +10,8 @@
         <module>twoThreadTransData</module>
         <module>base</module>
         <module>threadCommunication</module>
+        <module>sigleton</module>
+        <module>threadGroup</module>
     </modules>
     <packaging>pom</packaging>
 
