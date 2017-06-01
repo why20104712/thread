@@ -28,6 +28,7 @@ public class LazySigleton {
         if (null == lazySigleton) {
             try {
                 /**
+                 * 模拟在创建对象之前做一些准备性的工作
                  * 线程在这睡眠 2秒后，分别创建了对象，因为每个线程进来的时候，都是null
                  * 这就是非线程安全问题
                  */
