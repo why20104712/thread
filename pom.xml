@@ -11,6 +11,7 @@
         <module>threadCommunication</module>
         <module>sigleton</module>
         <module>threadGroup</module>
+        <module>threadState</module>
     </modules>
     <packaging>pom</packaging>
 
