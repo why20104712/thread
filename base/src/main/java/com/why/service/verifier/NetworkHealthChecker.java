@@ -1,4 +1,4 @@
-package com.why.countdownlatch.service.verifier;
+package com.why.service.verifier;
 
 import java.util.concurrent.CountDownLatch;
 

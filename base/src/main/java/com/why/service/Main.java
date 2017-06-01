@@ -1,4 +1,4 @@
-package com.why.countdownlatch.service;
+package com.why.service;
 
 public class Main {
     public static void main(String[] args) {

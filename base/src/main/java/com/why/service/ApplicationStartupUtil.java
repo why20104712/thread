@@ -1,4 +1,4 @@
-package com.why.countdownlatch.service;
+package com.why.service;
 
 import com.why.countdownlatch.service.verifier.BaseHealthChecker;
 import com.why.countdownlatch.service.verifier.CacheHealthChecker;
