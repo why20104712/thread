@@ -24,4 +24,29 @@ public class ReentrantLockService {
         lock.unlock();
     }
 
+    public void testMethodA() {
+        try {
+            lock.lock();
+            System.out.println("当前线程的名称：" + Thread.currentThread().getName() + " testMethodA time = " + System.currentTimeMillis());
+            Thread.sleep(3000);
+            System.out.println("当前线程的名称：" + Thread.currentThread().getName() + " testMethodA time = " + System.currentTimeMillis());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            lock.unlock();
+        }
+    }
+
+    public void testMethodB() {
+        try {
+            lock.lock();
+            System.out.println("当前线程的名称：" + Thread.currentThread().getName() + " testMethodB time = " + System.currentTimeMillis());
+            Thread.sleep(3000);
+            System.out.println("当前线程的名称：" + Thread.currentThread().getName() + " testMethodB time = " + System.currentTimeMillis());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } finally {
+            lock.unlock();
+        }
+    }
 }
