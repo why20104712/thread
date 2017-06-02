@@ -13,6 +13,7 @@
         <module>threadGroup</module>
         <module>threadState</module>
         <module>lock</module>
+        <module>callable</module>
     </modules>
     <packaging>pom</packaging>
 
