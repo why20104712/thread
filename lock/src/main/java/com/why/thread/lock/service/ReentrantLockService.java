@@ -1,4 +1,4 @@
-package com.why.thread.service;
+package com.why.thread.lock.service;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

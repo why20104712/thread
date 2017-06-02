@@ -1,6 +1,6 @@
-package com.why.thread.extthread;
+package com.why.thread.lock.extthread;
 
-import com.why.thread.service.ReentrantLockService;
+import com.why.thread.lock.service.ReentrantLockService;
 
 public class ReentrantLockThread extends Thread {
 

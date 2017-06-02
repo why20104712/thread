@@ -1,7 +1,7 @@
-package com.why.thread.test;
+package com.why.thread.lock.test;
 
-import com.why.thread.extthread.*;
-import com.why.thread.service.ReentrantLockService;
+import com.why.thread.lock.extthread.*;
+import com.why.thread.lock.service.ReentrantLockService;
 
 public class ReentrantLockTest {
 
