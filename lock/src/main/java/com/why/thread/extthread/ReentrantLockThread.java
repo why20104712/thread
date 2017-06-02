@@ -6,7 +6,8 @@ public class ReentrantLockThread extends Thread {
 
     private ReentrantLockService reentrantLockService;
 
-    public ReentrantLockThread(ReentrantLockService reentrantLockService) {
+    public ReentrantLockThread(ThreadGroup threadGroup, String name, ReentrantLockService reentrantLockService) {
+        super(threadGroup, name);
         this.reentrantLockService = reentrantLockService;
     }
 
