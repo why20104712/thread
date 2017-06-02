@@ -12,6 +12,7 @@
         <module>sigleton</module>
         <module>threadGroup</module>
         <module>threadState</module>
+        <module>lock</module>
     </modules>
     <packaging>pom</packaging>
 
