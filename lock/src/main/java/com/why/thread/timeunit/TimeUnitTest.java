@@ -2,6 +2,11 @@ package com.why.thread.timeunit;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 测试TimeUnit的两个主要功能
+ * 可读性
+ * 不同时间维度的转化
+ */
 public class TimeUnitTest {
 
     public static void main(String[] args) {
