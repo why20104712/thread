@@ -6,6 +6,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 
+/**
+ * 测试TimerTask执行任务的时间和当前时间相比，之前，之后的情况
+ * @author why
+ * @date 2017/6/3 12:14
+ */
 public class TaskTest {
 
     public static void main(String[] args) {

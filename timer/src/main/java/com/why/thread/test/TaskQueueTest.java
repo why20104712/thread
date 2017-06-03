@@ -7,6 +7,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 
+/**
+ * 测试TimerTask以队列的方式执行任务
+ * @author why
+ * @date 2017/6/3 12:12
+ */
 public class TaskQueueTest {
 
     public static void main(String[] args) {

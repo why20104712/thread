@@ -6,6 +6,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
 
+/**
+ * 测试一个Timer可以有多个任务，任务以队列的方式执行
+ * @author why
+ * @date 2017/6/3 12:13
+ */
 public class MultiTaskTest {
 
     public static void main(String[] args) {
