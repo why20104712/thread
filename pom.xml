@@ -14,6 +14,7 @@
         <module>threadState</module>
         <module>lock</module>
         <module>callable</module>
+        <module>timer</module>
     </modules>
     <packaging>pom</packaging>
 
