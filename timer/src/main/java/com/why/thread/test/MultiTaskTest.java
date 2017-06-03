@@ -1,6 +1,6 @@
 package com.why.thread.test;
 
-import com.why.thread.task.Task;
+import com.why.thread.task.extthread.Task;
 
 import java.util.Calendar;
 import java.util.Date;
