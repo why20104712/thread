@@ -1,6 +1,6 @@
 package com.why.thread.test;
 
-import com.why.thread.task.extthread.PeriodTask;
+import com.why.thread.task.extthread.TaskA;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -28,6 +28,11 @@ public class PeriodTaskTest {
          * 每隔4000毫秒执行任务
          */
 //        timer.schedule(new PeriodTask(), date1, 4000);
-        timer.schedule(new PeriodTask(), date2, 4000);
+//        timer.schedule(new PeriodTask(), date2, 4000);
+        /**
+         * 任务以队列的方式运行，一个任务延时，队列中的任务都会被延时
+         */
+        timer.schedule(new TaskA(), date1, 4000);
+//        timer.schedule(new TaskB(), date2, 4000);
     }
 }
