@@ -1,4 +1,4 @@
-package com.why.thread.test;
+package com.why.thread.task.test;
 
 import com.why.thread.task.extthread.TaskA;
 

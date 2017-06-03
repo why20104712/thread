@@ -1,4 +1,4 @@
-package com.why.thread.test;
+package com.why.thread.task.test;
 
 import java.util.Random;
 import java.util.concurrent.Callable;
