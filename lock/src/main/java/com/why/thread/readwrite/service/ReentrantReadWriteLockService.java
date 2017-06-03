@@ -12,7 +12,7 @@ public class ReentrantReadWriteLockService {
     /**
      * 读读共享
      */
-    public void read() {
+    public void readShare() {
 
         try {
             try {
@@ -32,7 +32,7 @@ public class ReentrantReadWriteLockService {
     /**
      * 写写互斥
      */
-    public void write() {
+    public void writeMutex() {
 
         try {
             try {
