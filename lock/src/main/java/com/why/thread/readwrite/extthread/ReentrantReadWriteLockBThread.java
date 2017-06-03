@@ -13,7 +13,7 @@ public class ReentrantReadWriteLockBThread extends Thread {
 
     @Override
     public void run() {
-        reentrantReadWriteLockService.readShare();
+//        reentrantReadWriteLockService.readShare();
         reentrantReadWriteLockService.writeMutex();
     }
 }

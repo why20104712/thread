@@ -18,7 +18,7 @@ public class ReentrantReadWriteLockService {
             try {
                 reentrantReadWriteLock.readLock().lock();
                 TimeUnit.SECONDS.sleep(3);
-                System.out.println("read读读共享，当前线程名称：" + Thread.currentThread().getName());
+                System.out.println("read读读共享，当前线程名称：" + Thread.currentThread().getName() + "当前时间：" + System.currentTimeMillis());
             } finally {
                 reentrantReadWriteLock.readLock().unlock();
             }
@@ -30,7 +30,7 @@ public class ReentrantReadWriteLockService {
 
 
     /**
-     * 写写互斥
+     * 写写互斥，读写互斥，写读互斥
      */
     public void writeMutex() {
 
@@ -38,7 +38,7 @@ public class ReentrantReadWriteLockService {
             try {
                 reentrantReadWriteLock.writeLock().lock();
                 TimeUnit.SECONDS.sleep(3);
-                System.out.println("write写写互斥，当前线程名称：" + Thread.currentThread().getName());
+                System.out.println("write写写互斥，只要存在写线程就互斥，当前线程名称：" + Thread.currentThread().getName() + "当前时间：" + System.currentTimeMillis());
             } finally {
                 reentrantReadWriteLock.writeLock().unlock();
             }
