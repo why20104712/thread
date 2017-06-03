@@ -1,7 +1,8 @@
 package condition.test;
 
-import condition.extthtread.ConditionAwaitThread;
-import condition.extthtread.ConditionSignalThread;
+import condition.extthtread.ConditionAwaitAThread;
+import condition.extthtread.ConditionAwaitBThread;
+import condition.extthtread.ConditionSignalAThread;
 import condition.service.ConditionService;
 
 public class ConditionTest {
@@ -10,19 +11,22 @@ public class ConditionTest {
 
         ConditionService conditionService = new ConditionService();
 
-        ConditionAwaitThread conditionAwaitThread = new ConditionAwaitThread(conditionService);
-        conditionAwaitThread.setName("conditionAwaitThread");
-        conditionAwaitThread.start();
+        ConditionAwaitAThread conditionAwaitAThread = new ConditionAwaitAThread(conditionService);
+        conditionAwaitAThread.setName("conditionAwaitAThread");
+        conditionAwaitAThread.start();
 
+        ConditionAwaitBThread conditionAwaitBThread = new ConditionAwaitBThread(conditionService);
+        conditionAwaitBThread.setName("conditionAwaitBThread");
+        conditionAwaitBThread.start();
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        ConditionSignalThread conditionSignalThread = new ConditionSignalThread(conditionService);
-        conditionSignalThread.setName("conditionSignalThread");
-        conditionSignalThread.start();
+        ConditionSignalAThread conditionSignalAThread = new ConditionSignalAThread(conditionService);
+        conditionSignalAThread.setName("conditionSignalAThread");
+        conditionSignalAThread.start();
 
 
     }
