@@ -18,6 +18,17 @@ public class ThreadPoolRun {
 
 
         /**
+         * 线程池工作流程
+         * 、如果线程池中的线程小于corePoolSize时就会创建新线程直接执行任务。
+
+         2、如果线程池中的线程大于corePoolSize时就会暂时把任务存储到工作队列workQueue中等待执行。
+
+         3、如果工作队列workQueue也满时：当线程数小于最大线程池数maximumPoolSize时就会创建新线程来处理，而线程数大于等于最大线程池数maximumPoolSize时就会执行拒绝策略。
+         */
+
+
+
+        /**
          * 固定线程数量的线程池
          */
         ExecutorService executorService = Executors.newFixedThreadPool(3);
@@ -49,6 +60,18 @@ public class ThreadPoolRun {
          * 线程执行，无返回值
          */
         executorService.execute(thread);
+
+
+        /**
+         * 关闭线程池
+         * 不再接受新的任务，之前提交的任务等执行结束再关闭线程池。
+         */
+        executorService.shutdown();
+
+        /**
+         * 不再接受新的任务，试图停止池中的任务再关闭线程池，返回所有未处理的线程list列表。
+         */
+        executorService.shutdownNow();
 
 
 
