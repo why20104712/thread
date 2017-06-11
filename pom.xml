@@ -18,6 +18,7 @@
         <module>syncMethod</module>
         <module>syncCodeBlock</module>
         <module>volatile</module>
+        <module>threadPool</module>
     </modules>
     <packaging>pom</packaging>
 
